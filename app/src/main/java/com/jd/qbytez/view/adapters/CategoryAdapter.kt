@@ -43,7 +43,10 @@ class CategoryAdapter(val fragment: Fragment, val categoryViewModel: CategoryVie
         holder.tranType.text= item.transactionType
 
         holder.catImage.setImageDrawable(iconDialogIconPack?.getIcon(item.iconId)?.drawable)
-
+        holder.catImage.setColorFilter(ContextCompat.getColor(
+            fragment.requireContext(),
+            R.color.blackToWhite
+        ))
         if (item.transactionType == "Income") {
             holder.tranType.setTextColor(
                 ContextCompat.getColor(

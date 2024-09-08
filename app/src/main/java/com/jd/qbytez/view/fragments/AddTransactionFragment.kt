@@ -75,12 +75,7 @@ class AddTransactionFragment : Fragment() {
             (activity as MainActivity).showTitle(getString(R.string.title_update_transaction))
             binding.btnTransaction.text = getString(R.string.title_update)
             binding.etTransTitle.setText(transactionsEntity?.title)
-            binding.etAmount.setText(transactionsEntity?.amount?.let {
-                BudgetTrackerUtils.getFormattedAmount(
-                    false,
-                    it, false
-                )
-            })
+            binding.etAmount.setText(transactionsEntity?.amount?.toInt().toString())
             binding.etdesc.setText(transactionsEntity?.transactionDescription)
             selectedDate = transactionsEntity?.transactionDate.toString()
         } else {
