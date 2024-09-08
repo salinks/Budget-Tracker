@@ -1,0 +1,129 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/lnrForm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_15sdp"
+            android:orientation="vertical"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                style="@style/medium_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:text="@string/title_category_name"
+                android:textAllCaps="true"
+                android:textSize="@dimen/_8sdp" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                app:cardCornerRadius="@dimen/_5sdp"
+                app:strokeColor="@color/blackToWhite"
+                app:strokeWidth=".5dp">
+
+                <EditText
+                    android:id="@+id/etCategoryName"
+                    style="@style/medium_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:imeOptions="actionDone"
+                    android:inputType="textCapWords|text"
+                    android:paddingHorizontal="@dimen/_8sdp" />
+
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+            <TextView
+                style="@style/medium_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="@string/title_transaction_type"
+                android:textAllCaps="true"
+                android:textSize="@dimen/_8sdp" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                app:cardCornerRadius="@dimen/_5sdp"
+                app:strokeColor="@color/blackToWhite"
+                app:strokeWidth=".5dp">
+
+                <Spinner
+                    android:id="@+id/spnTransType"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+            <TextView
+                style="@style/medium_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="@string/title_category_icon"
+                android:textAllCaps="true"
+                android:textSize="@dimen/_8sdp" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:id="@+id/cvCatIcon"
+                android:layout_marginTop="@dimen/_5sdp"
+                app:cardCornerRadius="@dimen/_5sdp"
+                app:strokeColor="@color/blackToWhite"
+                app:strokeWidth=".5dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/tvBtnText"
+                        style="@style/medium_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textAllCaps="true"
+                        android:gravity="center_horizontal|center"
+                        android:paddingHorizontal="@dimen/_10sdp"
+                        android:text="@string/select_category_icon"
+                        android:textSize="@dimen/_12sdp" />
+                    <ImageView
+                        android:id="@+id/ivIcon"
+                        android:layout_width="@dimen/_35sdp"
+                        android:layout_height="@dimen/_35sdp"
+                        android:layout_centerInParent="true"
+                        android:padding="3sp"/>
+                </RelativeLayout>
+
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnCategory"
+                style="@style/medium_text"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:backgroundTint="@color/colorPrimary"
+                android:text="@string/title_create"
+                android:textColor="#FFFFFF" />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,226 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/whiteToGrey">
+
+
+        <LinearLayout
+            android:id="@+id/lnrForm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_15sdp"
+            android:orientation="vertical"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                style="@style/medium_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:text="@string/str_title"
+                android:textAllCaps="true"
+                android:textSize="@dimen/_8sdp" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                app:cardCornerRadius="@dimen/_5sdp"
+                app:strokeColor="@color/blackToWhite"
+                app:strokeWidth=".5dp">
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:hint="@string/enter_transaction_title"
+                    android:padding="@dimen/_5sdp"
+                    style="@style/medium_text"
+                    android:imeOptions="actionNext"
+                    android:maxLines="1"
+                    android:importantForAutofill="no"
+                    android:maxLength="50"
+                    android:id="@+id/etTransTitle"
+                    android:inputType="textCapWords"/>
+
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+            <TextView
+                style="@style/medium_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="@string/title_amount"
+                android:textAllCaps="true"
+                android:textSize="@dimen/_8sdp" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                app:cardCornerRadius="@dimen/_5sdp"
+                app:strokeColor="@color/blackToWhite"
+                app:strokeWidth=".5dp">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:hint="@string/title_enter_amount"
+                    android:padding="@dimen/_5sdp"
+                    style="@style/medium_text"
+                    android:importantForAutofill="no"
+                    android:imeOptions="actionNext"
+                    android:maxLines="1"
+                    android:longClickable="false"
+
+                    android:maxLength="10"
+                    android:id="@+id/etAmount"
+                    android:inputType="numberSigned|number"/>
+            </com.google.android.material.card.MaterialCardView>
+            <TextView
+                style="@style/medium_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="@string/title_notes"
+                android:textAllCaps="true"
+                android:textSize="@dimen/_8sdp" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                app:cardCornerRadius="@dimen/_5sdp"
+                app:strokeColor="@color/blackToWhite"
+                app:strokeWidth=".5dp">
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:hint="@string/title_transaction_description"
+                    android:padding="@dimen/_5sdp"
+                    style="@style/medium_text"
+                    android:imeOptions="actionDone"
+                    android:maxLines="1"
+                    android:importantForAutofill="no"
+                    android:maxLength="100"
+                    android:id="@+id/etdesc"
+                    android:inputType="text"/>
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+            <TextView
+                style="@style/medium_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="@string/title_transaction_type"
+                android:textAllCaps="true"
+                android:textSize="@dimen/_8sdp" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                app:cardCornerRadius="@dimen/_5sdp"
+                app:strokeColor="@color/blackToWhite"
+                app:strokeWidth=".5dp">
+
+                <Spinner
+                    android:id="@+id/spnTransType"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <TextView
+                style="@style/medium_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="@string/title_category"
+                android:textAllCaps="true"
+                android:textSize="@dimen/_8sdp" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                app:cardCornerRadius="@dimen/_5sdp"
+                app:strokeColor="@color/blackToWhite"
+                app:strokeWidth=".5dp">
+                <Spinner
+                    android:id="@+id/spnCategory"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+            <TextView
+                style="@style/medium_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="@string/title_date"
+                android:textAllCaps="true"
+                android:textSize="@dimen/_8sdp" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                app:cardCornerRadius="@dimen/_5sdp"
+                app:strokeColor="@color/blackToWhite"
+                android:id="@+id/cvTransDate"
+                app:strokeWidth=".5dp">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:id="@+id/tvTansDate"
+                        style="@style/medium_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Select Date"
+                        android:padding="@dimen/_5sdp"
+                        android:gravity="center_vertical|start"
+                        android:textSize="@dimen/_12sdp" />
+
+                    <ImageView
+                        android:layout_width="@dimen/_35sdp"
+                        android:layout_height="@dimen/_35sdp"
+                        android:src="@drawable/ic_calendar"
+                        android:padding="@dimen/_7sdp"
+                        android:layout_alignParentEnd="true"/>
+
+
+
+                </RelativeLayout>
+
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnTransaction"
+                style="@style/medium_text"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:backgroundTint="@color/primary_color"
+                android:text="@string/title_create"
+                android:textColor="#FFFFFF" />
+
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

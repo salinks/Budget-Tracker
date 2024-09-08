@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+
+
+    <style name="Theme.BudgetTracker" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/primary_color</item>
+        <item name="colorPrimaryVariant">@color/primary_color_500</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">@color/colorPrimary</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="m">false</item>
+
+    </style>
+    <style name="medium_text" parent="@style/TextAppearance.AppCompat">
+        <item name="android:textColor">@color/textColor</item>
+        <item name="android:textSize">@dimen/_12sdp</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:fontFamily">@font/montserrat_regular</item>
+    </style>
+
+    <style name="Widget.BottomNavigationView"
+        parent="Widget.Design.BottomNavigationView">
+        <item name="android:fontFamily">@font/montserrat_regular</item>
+    </style>
+
+    <style name="title_font" parent="@style/TextAppearance.AppCompat">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/_13sdp</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:fontFamily">@font/title_font</item>
+    </style>
+    <style name="semi_bold" parent="@style/TextAppearance.AppCompat">
+        <item name="android:textColor">@color/textColor</item>
+        <item name="android:textSize">@dimen/_12sdp</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:fontFamily">@font/montserrat_medium</item>
+    </style>
+
+    <style name="MaterialCalendarCustomStyle" parent="@style/ThemeOverlay.MaterialComponents.MaterialCalendar">
+        <!-- Buttons Color-->
+        <item name="colorPrimary">@color/cpToWhite</item>
+        <!--Days unselected Text Color and Month Text Color-->
+        <item name="android:textColorPrimary">@color/blackToWhite</item>
+        <!--Header Background Color and selected Day Background Color-->
+        <item name="colorAccent">@color/cpToGrey</item>
+        <!--Month Background Color-->
+        <item name="colorSurface">@color/black</item>
+    </style>
+
+</resources>
